@@ -2523,5 +2523,10 @@ PrefabInstance:
       propertyPath: chaseRange
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 7472437469068891943, guid: 29fe30d0218914ac4a39474b5e4e9415,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29fe30d0218914ac4a39474b5e4e9415, type: 3}
