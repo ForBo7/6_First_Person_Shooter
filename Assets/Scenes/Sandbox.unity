@@ -1663,6 +1663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048ada34dfa1c45f4a7072dc374b92fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FPCamera: {fileID: 1439613063}
+  range: 100
+  gunDamage: 10
 --- !u!1001 &1309900874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1926,6 +1929,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4e11ef4f39bc65e44a4b0755ecac6ea1,
     type: 3}
   m_PrefabInstance: {fileID: 1411161412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1439613063 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1581913732}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1466396315
 PrefabInstance:
@@ -2375,6 +2384,11 @@ PrefabInstance:
     - target: {fileID: 8146844016142286605, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8146844016142286605, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+        type: 3}
+      propertyPath: m_PlayAutomatically
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2875,15 +2889,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1259172371}
-    - target: {fileID: 7472437469068891940, guid: 29fe30d0218914ac4a39474b5e4e9415,
+    - target: {fileID: 3853542529530247800, guid: 29fe30d0218914ac4a39474b5e4e9415,
         type: 3}
-      propertyPath: chaseRange
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7472437469068891943, guid: 29fe30d0218914ac4a39474b5e4e9415,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 2
+      propertyPath: hitPoints
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29fe30d0218914ac4a39474b5e4e9415, type: 3}

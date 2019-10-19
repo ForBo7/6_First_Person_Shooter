@@ -26,12 +26,7 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] Camera FPCamera;
     [SerializeField] float range;
-    Animation gunAnimation;
-
-    private void Start()
-    {
-        gunAnimation = GetComponent<Animation>();
-    }
+    [SerializeField] float gunDamage;
 
     void Update()
     {
@@ -44,8 +39,18 @@ public class Weapon : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
-        Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range);
-        Debug.Log("Raycast has hit " + hit.transform.name);
+        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
+        {
+            Debug.Log("Raycast has hit " + hit.transform.name);
+            // TODO: add some hit effect for visual feedback
+            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+            if (target == null) return; // So that a null error does not appear if a target has no enemy health script
+            target.TakeDamage(gunDamage);
+        }
+        else
+        {
+            return;
+        }
     }
 
 }
