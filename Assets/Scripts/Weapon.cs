@@ -29,6 +29,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float range;
     [SerializeField] float gunDamage;
     [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] GameObject bulletSparks;
 
     void Update()
     {
@@ -54,8 +55,7 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
         {
-            Debug.Log("Raycast has hit " + hit.transform.name);
-            // TODO: add some hit effect for visual feedback
+            PlayBulletSparks(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target == null) return; // So that a null error does not appear if a target has no enemy health script
             target.TakeDamage(gunDamage);
@@ -64,5 +64,11 @@ public class Weapon : MonoBehaviour
         {
             return;
         }
+    }
+
+    private void PlayBulletSparks(RaycastHit hit)
+    {
+        GameObject instantiatedBulletSparks = Instantiate(bulletSparks, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(instantiatedBulletSparks, 1f);
     }
 }
