@@ -8,10 +8,11 @@ public class SceneLoader : MonoBehaviour
     public void ReloadGame()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        Application.Quit(); // if this doesn't work, try setting Time.timeScale = 1
     }
 }
