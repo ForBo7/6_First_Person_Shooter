@@ -18,5 +18,4 @@ public class EnemyAttack : MonoBehaviour
         if (target == null) return; // To protect against null
         target.TakeDamage(damage);
     }
-
 }

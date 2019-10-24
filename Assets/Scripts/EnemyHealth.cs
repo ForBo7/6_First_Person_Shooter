@@ -10,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float gunDamage)
     {
+        BroadcastMessage("OnDamageTaken");
+
         hitPoints -= gunDamage;
 
         if (hitPoints <= 0)
