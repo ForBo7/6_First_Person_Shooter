@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  chaseRange: 7.5
-  turnSpeed: 0
+  chaseRange: 10
+  turnSpeed: 10
 --- !u!114 &3853542529530247800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b229da018d34d7f84c4f19fe41a7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 120
 --- !u!95 &3576859518467410615
 Animator:
   serializedVersion: 3
