@@ -41,8 +41,12 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        PlayMuzzleFlash();
-        ProcessRaycast();
+        if (GetComponent<Ammo>().GetAmmoAmount() != 0)
+        {
+            PlayMuzzleFlash();
+            ProcessRaycast();
+            GetComponent<Ammo>().ReduceCurrentAmmo();
+        }
     }
 
     private void PlayMuzzleFlash()
