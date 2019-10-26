@@ -253,7 +253,7 @@ MonoBehaviour:
     StrafeSpeed: 4
     RunMultiplier: 2
     RunKey: 304
-    JumpForce: 50
+    JumpForce: 65
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:
@@ -374,10 +374,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2000000}
   range: 100
-  gunDamage: 10
+  gunDamage: 20
   muzzleFlash: {fileID: 2746698621607031130}
   bulletSparks: {fileID: 4818479430226235589, guid: 858a015e6c3d8459283ec774dbfac6b0,
     type: 3}
+--- !u!114 &1448160260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3640261239984124037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedd585e381df47a592f04a14d5a9a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomedInFOV: 30
+  zoomedOutFOV: 60
 --- !u!1001 &1970554695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -467,33 +481,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
         type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
-        type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
         type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
-        type: 3}
-      propertyPath: ShapeModule.angle
-      value: 89.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
-        type: 3}
-      propertyPath: ShapeModule.type
-      value: 4
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
         type: 3}
@@ -502,8 +496,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2746698619637036573, guid: d5fcfe73059ce419dbd834af338d18af,
         type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 1
+      propertyPath: ShapeModule.angle
+      value: 89.7
       objectReference: {fileID: 0}
     - target: {fileID: 6944307690182632803, guid: d5fcfe73059ce419dbd834af338d18af,
         type: 3}
