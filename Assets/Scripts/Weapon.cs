@@ -30,23 +30,29 @@ public class Weapon : MonoBehaviour
     [SerializeField] float gunDamage;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject bulletSparks;
+    [SerializeField] float timeBetweenShots;
+
+    bool canShoot = true;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canShoot == true)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
     }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
+        canShoot = false;
         if (GetComponent<Ammo>().GetAmmoAmount() != 0)
         {
             PlayMuzzleFlash();
             ProcessRaycast();
             GetComponent<Ammo>().ReduceCurrentAmmo();
         }
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     private void PlayMuzzleFlash()
@@ -74,5 +80,11 @@ public class Weapon : MonoBehaviour
     {
         GameObject instantiatedBulletSparks = Instantiate(bulletSparks, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(instantiatedBulletSparks, 1f);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }
