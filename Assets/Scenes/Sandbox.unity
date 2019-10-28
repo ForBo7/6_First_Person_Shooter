@@ -7321,7 +7321,7 @@ PrefabInstance:
     - target: {fileID: 3640261239984124037, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1264135543, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: timeBetweenShots
@@ -7330,7 +7330,7 @@ PrefabInstance:
     - target: {fileID: 8941175998484865521, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3149837789492657135, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
@@ -7372,7 +7372,10 @@ PrefabInstance:
       propertyPath: ammoAmount
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1581913734, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+    - {fileID: 7733842891749944433, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+    - {fileID: 733713521839534979, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
 --- !u!1001 &1588013803
 PrefabInstance:
@@ -8678,6 +8681,31 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8c19a618a0bd9844583b91dca0875a34, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f114e6b62ad5134b9ba4e0a01ddc050, type: 3}
+--- !u!1 &1986167824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1581913732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1986167825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986167824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b503e71aabce34dcaa3ad270ff548cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoSlots:
+  - ammoType: 0
+    ammoAmount: 5
+  - ammoType: 1
+    ammoAmount: 5
+  - ammoType: 2
+    ammoAmount: 7
 --- !u!4 &1993045379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7f114e6b62ad5134b9ba4e0a01ddc050,

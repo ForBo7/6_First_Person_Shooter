@@ -1,70 +1,83 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿//using System;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class Weapon : MonoBehaviour
-{
-    [SerializeField] Camera FPCamera;
-    [SerializeField] float range;
-    [SerializeField] float gunDamage;
-    [SerializeField] ParticleSystem muzzleFlash;
-    [SerializeField] GameObject bulletSparks;
-    [SerializeField] float timeBetweenShots;
+//public class Weapon : MonoBehaviour
+//{
+//    [SerializeField] Camera FPCamera;
+//    [SerializeField] float range;
+//    [SerializeField] float gunDamage;
+//    [SerializeField] ParticleSystem muzzleFlash;
+//    [SerializeField] GameObject bulletSparks;
+//    [SerializeField] float timeBetweenShots;
 
-    bool canShoot = true;
+//    bool canShoot = true;
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && canShoot == true)
-        {
-            StartCoroutine(Shoot());
-        }
-    }
+//    private void OnEnable()
+//    {
+//        if (canShoot == false)
+//        {
+//            Invoke("SetCanShootTrue", timeBetweenShots);
+//        }
+//    }
 
-    IEnumerator Shoot()
-    {
-        canShoot = false;
-        if (GetComponent<Ammo>().GetAmmoAmount() != 0)
-        {
-            PlayMuzzleFlash();
-            ProcessRaycast();
-            GetComponent<Ammo>().ReduceCurrentAmmo();
-        }
-        yield return new WaitForSeconds(timeBetweenShots);
-        canShoot = true;
-    }
+//    void Update()
+//    {
+//        if (Input.GetMouseButtonDown(0) && canShoot == true)
+//        {
+//            StartCoroutine(Shoot());
+//        }
+//    }
 
-    private void PlayMuzzleFlash()
-    {
-        muzzleFlash.Play();
-    }
+//    IEnumerator Shoot()
+//    {
+//        canShoot = false;
+//        //if (GetComponent<Ammo>().GetAmmoAmount() != 0)
+//        //{
+//        //    PlayMuzzleFlash();
+//        //    ProcessRaycast();
+//        //    GetComponent<Ammo>().ReduceCurrentAmmo();
+//        //}
+//        //yield return new WaitForSeconds(timeBetweenShots);
+//        canShoot = true;
+//    }
 
-    private void ProcessRaycast()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
-        {
-            PlayBulletSparks(hit);
-            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            if (target == null) return; // So that a null error does not appear if a target has no enemy health script
-            target.TakeDamage(gunDamage);
-        }
-        else
-        {
-            return;
-        }
-    }
+//    private void PlayMuzzleFlash()
+//    {
+//        muzzleFlash.Play();
+//    }
 
-    private void PlayBulletSparks(RaycastHit hit)
-    {
-        GameObject instantiatedBulletSparks = Instantiate(bulletSparks, hit.point, Quaternion.LookRotation(hit.normal));
-        Destroy(instantiatedBulletSparks, 1f);
-    }
+//    private void ProcessRaycast()
+//    {
+//        RaycastHit hit;
+//        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
+//        {
+//            PlayBulletSparks(hit);
+//            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+//            if (target == null) return; // So that a null error does not appear if a target has no enemy health script
+//            target.TakeDamage(gunDamage);
+//        }
+//        else
+//        {
+//            return;
+//        }
+//    }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
-}
+//    private void PlayBulletSparks(RaycastHit hit)
+//    {
+//        GameObject instantiatedBulletSparks = Instantiate(bulletSparks, hit.point, Quaternion.LookRotation(hit.normal));
+//        Destroy(instantiatedBulletSparks, 1f);
+//    }
+
+//    private void OnDrawGizmosSelected()
+//    {
+//        Gizmos.color = Color.green;
+//        Gizmos.DrawWireSphere(transform.position, range);
+//    }
+
+//    private void SetCanShootTrue()
+//    {
+//        canShoot = true;
+//    }
+//}
