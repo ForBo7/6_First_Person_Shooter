@@ -12,6 +12,61 @@ public class WeaponSwitcher : MonoBehaviour
         SetWeaponActive();
     }
 
+    private void Update()
+    {
+        int previousWeapon = currentWeapon;
+        ProcessKeyInput();
+        ProcessScrollWheel();
+
+        if (previousWeapon != currentWeapon)
+        {
+            SetWeaponActive();
+        }
+    }
+
+    private void ProcessScrollWheel()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            if (currentWeapon >= transform.childCount - 1) // there are 3 children, and there indices are 0, 1, 2. Hence the transform.childCount - 1
+            {
+                currentWeapon = 0; // we need to loop back to zero since there are only 3 weapons
+            }
+            else
+            {
+                currentWeapon++;
+            }
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            if (currentWeapon <= 0)
+            {
+                currentWeapon = transform.childCount - 1;
+            }
+            else
+            {
+                currentWeapon--;
+            }
+        }
+    }
+
+    private void ProcessKeyInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentWeapon = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentWeapon = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentWeapon = 2;
+        }
+    }
+
     private void SetWeaponActive()
     {
         int weaponIndex = 0;
@@ -30,8 +85,4 @@ public class WeaponSwitcher : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
 }
