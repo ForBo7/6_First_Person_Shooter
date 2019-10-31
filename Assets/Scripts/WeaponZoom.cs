@@ -12,8 +12,6 @@ public class WeaponZoom : MonoBehaviour
 
     RigidbodyFirstPersonController fpsController;
 
-    // get the weapon component and then check if it is enabled to fix the zoom bug
-
     private void Start()
     {
         fpsController = GetComponentInParent<RigidbodyFirstPersonController>();
@@ -29,6 +27,11 @@ public class WeaponZoom : MonoBehaviour
         {
             ZoomOutFOV();
         }
+    }
+
+    private void OnDisable()
+    {
+        ZoomOutFOV();
     }
 
     private void ZoomFOV()

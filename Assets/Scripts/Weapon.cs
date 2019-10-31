@@ -35,11 +35,11 @@ public class Weapon : MonoBehaviour
     IEnumerator Shoot()
     {
         canShoot = false;
-        if (/*GetComponent<Ammo>().GetAmmoAmount(ammoType)*/ ammoSlot.GetAmmoAmount(ammoType) != 0)
+        if (ammoSlot.GetAmmoAmount(ammoType) != 0)
         {
             PlayMuzzleFlash();
             ProcessRaycast();
-            /*GetComponent<Ammo>().ReduceCurrentAmmo(ammoType)*/ ammoSlot.ReduceCurrentAmmo(ammoType);
+            ammoSlot.ReduceCurrentAmmo(ammoType);
         }
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
