@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints;
 
-    // create a public method which reduces hitpoints by the amount of damage
+    bool isDead;
 
     public void TakeDamage(float gunDamage)
     {
@@ -16,8 +16,14 @@ public class EnemyHealth : MonoBehaviour
 
         if (hitPoints <= 0)
         {
-            Destroy(gameObject);
+            if (isDead) return; // so that the code below does not keep executing
+            isDead = true;
+            GetComponent<Animator>().SetTrigger("Dead");
         }
     }
 
+    public bool IsDead()
+    {
+        return isDead;
+    }
 }

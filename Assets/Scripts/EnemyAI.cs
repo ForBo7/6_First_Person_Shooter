@@ -14,16 +14,23 @@ public class EnemyAI : MonoBehaviour
     float distanceToTarget = Mathf.Infinity; // Infinity is used to initialize because it is a really large number meaning the enemy won't immediatly target the player
     bool isProvoked;
 
+    EnemyHealth enemyHealth;
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     void Update()
     {
+        if (enemyHealth.IsDead() == true)
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-
-        if(isProvoked)
+        if (isProvoked)
         {
             EngageTarget();
         }
