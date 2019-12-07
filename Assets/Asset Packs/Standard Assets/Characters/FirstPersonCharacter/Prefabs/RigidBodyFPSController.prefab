@@ -62,7 +62,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: d42729d4136cd4f338fb6f1231f53597, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.32
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -168,26 +168,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5490589990489972061}
     m_Modifications:
-    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
-        type: 3}
-      propertyPath: FPCamera
-      value: 
-      objectReference: {fileID: 2000000}
-    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
-        type: 3}
-      propertyPath: range
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
-        type: 3}
-      propertyPath: gunDamage
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
-        type: 3}
-      propertyPath: muzzleFlash
-      value: 
-      objectReference: {fileID: 2746698621607031130}
     - target: {fileID: 6717318311656965179, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
         type: 3}
       propertyPath: m_Name
@@ -253,6 +233,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
+    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
+        type: 3}
+      propertyPath: range
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
+        type: 3}
+      propertyPath: gunDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -3870254092591896305, guid: 2134fecd0f48c46febf19b1d3f0d10a8,
+        type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 2746698621607031130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2134fecd0f48c46febf19b1d3f0d10a8, type: 3}
 --- !u!1001 &2705835575361334083
@@ -262,11 +262,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5490589990489972061}
     m_Modifications:
-    - target: {fileID: -8197826921517985620, guid: 0fe4f0891599244abbb050dc50c11f9a,
-        type: 3}
-      propertyPath: FPCamera
-      value: 
-      objectReference: {fileID: 2000000}
     - target: {fileID: 6456049893293591218, guid: 0fe4f0891599244abbb050dc50c11f9a,
         type: 3}
       propertyPath: m_Name
@@ -332,6 +327,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8197826921517985620, guid: 0fe4f0891599244abbb050dc50c11f9a,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fe4f0891599244abbb050dc50c11f9a, type: 3}
 --- !u!1001 &5527106205820245221
