@@ -6,11 +6,11 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target;
     [SerializeField] float chaseRange;
     [SerializeField] float turnSpeed;
 
     NavMeshAgent navMeshAgent;
+    Transform target;
     float distanceToTarget = Mathf.Infinity; // Infinity is used to initialize because it is a really large number meaning the enemy won't immediatly target the player
     bool isProvoked;
 
@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         enemyHealth = GetComponent<EnemyHealth>();
+        target = FindObjectOfType<PlayerHealth>().transform;
     }
 
     void Update()
