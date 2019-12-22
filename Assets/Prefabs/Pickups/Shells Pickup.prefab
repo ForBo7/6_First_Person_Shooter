@@ -7,10 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1737519244522386737}
     m_Modifications:
-    - target: {fileID: 8776838346861301739, guid: 51427316715ac44b99815bb861e6c90d,
+    - target: {fileID: 861819303106614293, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
-      propertyPath: m_Name
-      value: Shotgun Shell (1)
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3213223295605465699, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
@@ -82,15 +82,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 861819303106614293, guid: 51427316715ac44b99815bb861e6c90d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8492559097821516873, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776838346861301739, guid: 51427316715ac44b99815bb861e6c90d,
+        type: 3}
+      propertyPath: m_Name
+      value: Shotgun Shell (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51427316715ac44b99815bb861e6c90d, type: 3}
@@ -101,10 +101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1737519244522386737}
     m_Modifications:
-    - target: {fileID: 8776838346861301739, guid: 51427316715ac44b99815bb861e6c90d,
+    - target: {fileID: 861819303106614293, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
-      propertyPath: m_Name
-      value: Shotgun Shell
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3213223295605465699, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
@@ -176,15 +176,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 861819303106614293, guid: 51427316715ac44b99815bb861e6c90d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8492559097821516873, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776838346861301739, guid: 51427316715ac44b99815bb861e6c90d,
+        type: 3}
+      propertyPath: m_Name
+      value: Shotgun Shell
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51427316715ac44b99815bb861e6c90d, type: 3}
@@ -195,15 +195,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8328646882659742537, guid: 382c2246480094ac49fd1809af4fef2e,
-        type: 3}
-      propertyPath: m_Name
-      value: Shells Pickup
-      objectReference: {fileID: 0}
     - target: {fileID: 2048764752, guid: 382c2246480094ac49fd1809af4fef2e, type: 3}
       propertyPath: ammoType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2048764752, guid: 382c2246480094ac49fd1809af4fef2e, type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 86f25ad5a6d994f2a81c2255167be1b2, type: 3}
     - target: {fileID: 4323124594452617580, guid: 382c2246480094ac49fd1809af4fef2e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -264,6 +263,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.23299
       objectReference: {fileID: 0}
+    - target: {fileID: 6833531038372176630, guid: 382c2246480094ac49fd1809af4fef2e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 86f25ad5a6d994f2a81c2255167be1b2, type: 3}
+    - target: {fileID: 6833531038372176630, guid: 382c2246480094ac49fd1809af4fef2e,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833531038372176630, guid: 382c2246480094ac49fd1809af4fef2e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328646882659742537, guid: 382c2246480094ac49fd1809af4fef2e,
+        type: 3}
+      propertyPath: m_Name
+      value: Shells Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 382c2246480094ac49fd1809af4fef2e, type: 3}
 --- !u!4 &1737519244522386737 stripped
@@ -279,10 +298,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1737519244522386737}
     m_Modifications:
-    - target: {fileID: 8776838346861301739, guid: 51427316715ac44b99815bb861e6c90d,
+    - target: {fileID: 861819303106614293, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
-      propertyPath: m_Name
-      value: Shotgun Shell (2)
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3213223295605465699, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
@@ -354,15 +373,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 861819303106614293, guid: 51427316715ac44b99815bb861e6c90d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8492559097821516873, guid: 51427316715ac44b99815bb861e6c90d,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8776838346861301739, guid: 51427316715ac44b99815bb861e6c90d,
+        type: 3}
+      propertyPath: m_Name
+      value: Shotgun Shell (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51427316715ac44b99815bb861e6c90d, type: 3}

@@ -16,6 +16,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] Ammo ammoSlot;
     [SerializeField] TextMeshProUGUI ammoText;
 
+    AudioSource audioSource;
     bool canShoot = true;
 
     private void OnEnable()
@@ -24,6 +25,7 @@ public class Weapon : MonoBehaviour
         {
             Invoke("SetCanShootTrue", timeBetweenShots);
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -44,6 +46,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        audioSource.PlayOneShot(audioSource.clip);
         canShoot = false;
         if (ammoSlot.GetAmmoAmount(ammoType) != 0)
         {
